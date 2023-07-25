@@ -5,16 +5,40 @@ using namespace std;
 
 int main() {
 
-    string berverages[] = {"Long Black", "Flat White", "Cappuccino", "Tea"};
-    string pricesRegular[] = {"$3.50", "$3.80", "$4.00", "$3.00"};
-    string pricesLarge[] = {"$3.70", "$4.20", "$4.30", "$3.20"};
-    string pricesExtraLarge[] = {"$4.00", "$4.50", "$5.00", "$3.50"};
+    struct student {
+        string name;
+        int id;
+    };
 
-    int berveragesLength = sizeof(berverages) / sizeof(berverages[0]);
+    student all[3];
 
-    for (int i = 0; i < berveragesLength; i++){
-        cout << setw(15) << left << berverages[i] << setw(10) << pricesRegular[i] << setw(10) << pricesLarge[i] << setw(10) << pricesExtraLarge[i] << endl;
-    }
+   for (int i = 0; i < 3; i++){
+        cout << "Enter Name: ";
+       getline( cin >> ws, all[i].name);
+        cout << "Enter id: ";
+       cin >> all[i].id;
+   };
+
+   cout << "Student list:\n";
+     for (int i = 0; i < 3; i++){
+        cout << all[i].name;
+        cout << " ID: " << all[i].id << endl;
+   };
+
+    // Fancy Table Using Loops
+
+    // string berverages[] = {"Long Black", "Flat White", "Cappuccino", "Tea"};
+    // string pricesRegular[] = {"$3.50", "$3.80", "$4.00", "$3.00"};
+    // string pricesLarge[] = {"$3.70", "$4.20", "$4.30", "$3.20"};
+    // string pricesExtraLarge[] = {"$4.00", "$4.50", "$5.00", "$3.50"};
+
+    // int berveragesLength = sizeof(berverages) / sizeof(berverages[0]);
+
+    // for (int i = 0; i < berveragesLength; i++){
+    //     cout << setw(15) << left << berverages[i] << setw(10) << pricesRegular[i] << setw(10) << pricesLarge[i] << setw(10) << pricesExtraLarge[i] << endl;
+    // }
+
+    // Normal Table Using Characters 
 
     // cout << " ______________________________________________________ " << endl;
     // cout << "|                                                      |" << endl; 
