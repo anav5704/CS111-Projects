@@ -5,25 +5,60 @@ using namespace std;
 
 int main() {
 
-    struct student {
-        string name;
-        int id;
-    };
+    float num, denom;
 
-    student all[3];
+    cout << "Enter a numerator: ";
+    cin >>  num;
 
-   for (int i = 0; i < 3; i++){
-        cout << "Enter Name: ";
-       getline( cin >> ws, all[i].name);
-        cout << "Enter id: ";
-       cin >> all[i].id;
-   };
+    while (cin.fail()){
+        cin.clear();
+        cin.ignore();
+        cout << "Numbers man, numbers! Try again: ";
+        cin >> num;
+    }
 
-   cout << "Student list:\n";
-     for (int i = 0; i < 3; i++){
-        cout << all[i].name;
-        cout << " ID: " << all[i].id << endl;
-   };
+    cout << "Enter a denominator: ";
+    cin >>  denom;
+
+    while (cin.fail()){
+        cin.clear();
+        cin.ignore();
+        cout << "Numbers man, numbers! Try again: ";
+        cin >> denom;
+    }
+
+    try {
+        if (denom != 0){
+            cout << num / denom;
+        }
+        else{
+            throw runtime_error("Cant divide by 0 dumbass.");
+        }
+    }
+
+    catch(const  runtime_error e){
+        cout << "Error: " << e.what();
+    }  
+
+//     struct student {
+//         string name;
+//         int id;
+//     };
+
+//     student all[3];
+
+//    for (int i = 0; i < 3; i++){
+//         cout << "Enter Name: ";
+//        getline( cin >> ws, all[i].name);
+//         cout << "Enter id: ";
+//        cin >> all[i].id;
+//    };
+
+//    cout << "Student list:\n";
+//      for (int i = 0; i < 3; i++){
+//         cout << all[i].name;
+//         cout << " ID: " << all[i].id << endl;
+//    };
 
     // Fancy Table Using Loops
 
@@ -38,11 +73,11 @@ int main() {
     //     cout << setw(15) << left << berverages[i] << setw(10) << pricesRegular[i] << setw(10) << pricesLarge[i] << setw(10) << pricesExtraLarge[i] << endl;
     // }
 
-    // Normal Table Using Characters 
+    // Normal Table Using Characters
 
     // cout << " ______________________________________________________ " << endl;
     // cout << "|                                                      |" << endl; 
-    // cout << "|                Programmers Cafe Menu                 |" << endl; 
+    // cout << "|                Programmers' Cafe Menu                |" << endl; 
     // cout << "|______________________________________________________|" << endl;
     // cout << "|Berverage     |Regular     |Large     |Extra Large    |" << endl;
     // cout << "|______________|____________|__________|_______________|" << endl;
