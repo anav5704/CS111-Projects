@@ -3,42 +3,61 @@
 #include<iomanip>
 using namespace std;
 
+void swap (int& a, int& b){
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
 int main() {
 
-    float num, denom;
+    int a, b;
 
-    cout << "Enter a numerator: ";
-    cin >>  num;
+    cout<<"Enter a: ";
+    cin>>a;
+    cout<<"Enter b: ";
+    cin>>b;
+    cout << "Before swap, a: " << a << " and b: " << b<<endl;
+    swap( a, b );
+    cout << "After swap, a: " << a << " and b: " << b<<endl;
+    
 
-    while (cin.fail()){
-        cin.clear();
-        cin.ignore();
-        cout << "Numbers man, numbers! Try again: ";
-        cin >> num;
-    }
+    // float num, denom;
 
-    cout << "Enter a denominator: ";
-    cin >>  denom;
+    // cout << "Enter a numerator: ";
+    // cin >>  num;
 
-    while (cin.fail()){
-        cin.clear();
-        cin.ignore();
-        cout << "Numbers man, numbers! Try again: ";
-        cin >> denom;
-    }
+    // while (cin.fail()){
+    //     cin.clear();
+    //     cin.ignore();
+    //     cout << "Numbers man, numbers! Try again: ";
+    //     cin >> num;
+    // }
 
-    try {
-        if (denom != 0){
-            cout << num / denom;
-        }
-        else{
-            throw runtime_error("Cant divide by 0 dumbass.");
-        }
-    }
+    // cout << "Enter a denominator: ";
+    // cin >>  denom;
 
-    catch(const  runtime_error e){
-        cout << "Error: " << e.what();
-    }  
+    // while (cin.fail()){
+    //     cin.clear();
+    //     cin.ignore();
+    //     cout << "Numbers man, numbers! Try again: ";
+    //     cin >> denom;
+    // }
+
+    // try {
+    //     if (denom != 0){
+    //         cout << num / denom;
+    //     }
+    //     else{
+    //         throw runtime_error("Cant divide by 0 dumbass.");
+    //     }
+    // }
+
+    // catch(const  runtime_error e){
+    //     cout << "Error: " << e.what();
+    // }  
+
+
 
 //     struct student {
 //         string name;
@@ -60,6 +79,8 @@ int main() {
 //         cout << " ID: " << all[i].id << endl;
 //    };
 
+
+
     // Fancy Table Using Loops
 
     // string berverages[] = {"Long Black", "Flat White", "Cappuccino", "Tea"};
@@ -72,6 +93,8 @@ int main() {
     // for (int i = 0; i < berveragesLength; i++){
     //     cout << setw(15) << left << berverages[i] << setw(10) << pricesRegular[i] << setw(10) << pricesLarge[i] << setw(10) << pricesExtraLarge[i] << endl;
     // }
+
+
 
     // Normal Table Using Characters
 
