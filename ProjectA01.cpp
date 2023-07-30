@@ -3,24 +3,57 @@
 #include<iomanip>
 using namespace std;
 
-void swap (int& a, int& b){
-    int temp = a;
-    a = b;
-    b = temp;
-}
+// void swap (int& a, int& b){
+//     int temp = a;
+//     a = b;
+//     b = temp;
+// }
 
 int main() {
 
-    int a, b;
+    // class BankAccount {
+    //     private:
+    //         string accountHolderName;
+    //         double accountBalance;
+    //     public:
+    //         BankAccount(){
+    //             accountHolderName = "";
+    //             accountBalance = 0.0;
+    //         }
+    //         BankAccount(string name, double balance){
+    //             accountHolderName = name;
+    //             accountBalance = balance;
+    //         }
+    //         void deposit(double amount){
+    //             accountBalance += amount;
+    //         }
+    //         void withdraw(double amount){
+    //             accountBalance -= amount;
+    //         }
+    //         void displayInfo(){
+    //             cout << "Name: " << accountHolderName << endl;
+    //             cout << "Balance: $" << accountBalance << endl;
+    //         }
+    // };
 
-    cout<<"Enter a: ";
-    cin>>a;
-    cout<<"Enter b: ";
-    cin>>b;
-    cout << "Before swap, a: " << a << " and b: " << b<<endl;
-    swap( a, b );
-    cout << "After swap, a: " << a << " and b: " << b<<endl;
+    // BankAccount Anav("Anav", 100);
+    // Anav.deposit(300.50);
+    // Anav.withdraw(200.25);
+    // Anav.displayInfo();
+
+
+
+    // int a, b;
+
+    // cout<<"Enter a: ";
+    // cin>>a;
+    // cout<<"Enter b: ";
+    // cin>>b;
+    // cout << "Before swap, a: " << a << " and b: " << b<<endl;
+    // swap( a, b );
+    // cout << "After swap, a: " << a << " and b: " << b<<endl;
     
+
 
     // float num, denom;
 

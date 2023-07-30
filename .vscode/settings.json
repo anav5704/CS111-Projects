@@ -3,6 +3,7 @@
         "**/frontmatter.json": "jsonc",
         "**/.frontmatter/config/*.json": "jsonc",
         "iostream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "typeinfo": "cpp"
     }
 }
