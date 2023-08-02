@@ -8,10 +8,8 @@ int main()
     int phone_number;
 
     // main program
-    cout << "Please enter your first name: ";
-    cin >> first_name;
-    cout << "Please enter your last name: ";
-    cin >> last_name;
+    cout << "Please enter your first and last name: ";
+    cin >> first_name >> last_name;
     cout << "Please enter your email adress: ";
     cin >> email_adress;
     cout << "Please enter your phone number: ";
