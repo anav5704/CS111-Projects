@@ -71,7 +71,7 @@ int main(){
         item_price = 20.50; 
         item_name = "large cake";
     }else{
-        cout << "That's not on the menu. To compensate for your computer illiteracy, we will just sell you a meium pizza!" << endl;
+        cout << "That's not on the menu. To compensate for your computer illiteracy, we will just sell you a medium pizza!" << endl;
         item_price = 20.50;
         item_name = "medium pizza";
     }
