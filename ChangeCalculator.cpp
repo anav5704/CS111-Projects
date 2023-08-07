@@ -125,28 +125,28 @@ int main(){
         change_in_cents -= five_cent * FIVE_CENT;    
 
         if (ten_dol != 0){
-            cout << ten_dol << setw(50) << "Ten dollar notes" << endl;
+            cout << "\t"  << ten_dol  << "\t Ten dollar notes" << endl;
         }
         if (five_dol != 0){
-            cout << five_dol << setw(50) << "Five dollar notes" << endl;
+            cout << "\t"  << five_dol  << "\t Five dollar notes" << endl;
         }
         if (two_dol != 0){
-             cout << two_dol << setw(50) << "Two dollar coins" << endl;
+             cout << "\t"  << two_dol  << "\t Two dollar coins" << endl;
         }
         if (one_dol != 0){
-            cout << one_dol << setw(50) << "One dollar coins" << endl;
+            cout << "\t"  << one_dol  << "\t One dollar coins" << endl;
         }
         if (fifty_cent != 0){
-            cout << fifty_cent << setw(50) << "Fifty cent coins" << endl;
+            cout << "\t"  << fifty_cent  << "\t Fifty cent coins" << endl;
         }
         if (twenty_cent != 0){
-            cout << twenty_cent << setw(50) << "Twenty cent coins" << endl;
+            cout << "\t"  << twenty_cent  << "\t Twenty cent coins" << endl;
         }
         if (ten_cent != 0){
-            cout << ten_cent << setw(50) << "Ten cent coins" << endl;
+            cout << "\t"  << ten_cent  << "\t Ten cent coins" << endl;
         }
         if (five_cent != 0){
-            cout << five_cent << setw(50) << "Five cent coins" << endl;
+            cout << "\t"  << five_cent  << "\t Five cent coins" << endl;
         }
     }
 
