@@ -11,20 +11,20 @@ int main(){
 
     // Constants
     const string TITLE = "Welcome to the order and checkout for Yummy Pizza & Bakery Shop!";
-    const double PIZZA_PRICE = 10.50;
     const int TEN_DOLLAR = 1000;
     const int FIVE_DOLLAR = 500;
     const int TWO_DOLLAR = 200;
     const int ONE_DOLLAR = 100;
-    const int FIFTY_CENT = 10;
+    const int FIFTY_CENT = 50;
     const int TWENTY_CENT = 20;
     const int TEN_CENT = 10;
     const int FIVE_CENT = 5;
     const int CONVERSION_RATE = 100;
 
     // Variables
-    int pizza_quantity, ten_dol, five_dol, two_dol, one_dol, fifty_cent, twenty_cent, ten_cent, five_cent, change_in_cents;
-    double total_price, payment, change;
+    int item_quantity, ten_dol, five_dol, two_dol, one_dol, fifty_cent, twenty_cent, ten_cent, five_cent, change_in_cents;
+    double total_price, payment, change,  item_price, remaining_amount;
+    string menu_item, item_name;
 
     // main program
     cout << fixed << setprecision(2) << endl;
@@ -32,67 +32,124 @@ int main(){
     cout << TITLE << endl;
     cout << setfill('-') << setw(TITLE.length())  << "" << endl << endl;
     cout.fill(' ');
-    cout << "We only sell Medium Pizzas for $" << PIZZA_PRICE << " each." << endl;
-    cout << "How many do you want to buy?";
-    cin >> pizza_quantity;
+    // cout << "We only sell Medium Pizzas for $" << item_price << " each." << endl;
+    cout << "Here's our menu:" << endl;
+    cout << " ________________________________________________________" << endl;
+    cout << "|Menu Item     |Small (S)   |Medium (M)  |Large (L)      |" << endl;
+    cout << "|______________|____________|____________|_______________|" << endl;
+    cout << "|Pizza (P)     |$15.50      |$20.50      |$25.50         |" << endl;
+    cout << "|______________|____________|____________|_______________|" << endl;
+    cout << "|Cake (C)      |$10.50      |$15.50      |$20.50         |" << endl;
+    cout << "|______________|____________|____________|_______________|" << endl << endl;
+    cout << "Disclaimer: if you fail to pay the full amaout, you will be banned from the shop." << endl;
+    cout << "Quick Guide: Enter either P for Pizza or C for cake, followed by either S, M or L for the size" << endl;
+    cout << "Example: Enter 'CM' for a medium sized cake" << endl << endl;
+    cout << "What would you like ot buy? ";
+    cin >> menu_item;
+
+    if (menu_item == "PS" || menu_item == "ps"){
+        item_price = 15.50;
+        item_name = "small pizza";
+    }
+    else if (menu_item == "PM" || menu_item == "pm"){
+        item_price = 20.50; 
+        item_name = "medium pizza";
+    }
+    else if (menu_item == "PL" || menu_item == "pl"){
+        item_price = 25.50; 
+        item_name = "large pizza";
+    }
+    else if (menu_item == "CS" || menu_item == "cs"){
+        item_price = 10.50; 
+        item_name = "small cake";
+    }
+    else if (menu_item == "CM" || menu_item == "cm"){
+        item_price = 15.50; 
+        item_name = "medium cake";
+    }
+    else if (menu_item == "CL" || menu_item == "cl"){
+        item_price = 20.50; 
+        item_name = "large cake";
+    }else{
+        cout << "That's not on the menu. To compensate for your computer illiteracy, we will just sell you a meium pizza!" << endl;
+        item_price = 20.50;
+        item_name = "medium pizza";
+    }
+
+    cout << "How many " << item_name << "s would you like to buy? ";
+    cin >> item_quantity;
     cout << endl;
 
-    total_price = pizza_quantity * PIZZA_PRICE;
+    total_price = item_quantity * item_price;
 
     cout << "The total is: " << total_price <<endl;
-    cout << "How much would you like to pay with?";
+    cout << "How much would you like to pay with? $";
     cin >> payment;
     cout << endl;
 
-    change = payment - total_price;
-    change_in_cents = change * CONVERSION_RATE;
+    remaining_amount = total_price - payment;
 
-    cout << "KK thanks, your change is: $" << change << endl;
-    cout << "You can pay with: " << endl;
+    if( payment < total_price ) {
+        cout << "You are missing: $" << remaining_amount << endl;
+        cout << "You are now banned from this shop!" << endl;
+    }
+    else {
+        change = payment - total_price;
+        change_in_cents = change * CONVERSION_RATE;
 
-    ten_dol = change_in_cents / TEN_DOLLAR;
-    change_in_cents -= ten_dol * TEN_DOLLAR;
+        cout << "KK thanks, your change is: $" << change << endl;
+        cout << "This will be given to you using: " << endl;
 
-    five_dol = change_in_cents / FIVE_DOLLAR;
-    change_in_cents -= five_dol * FIVE_DOLLAR;
+        ten_dol = change_in_cents / TEN_DOLLAR;
+        change_in_cents -= ten_dol * TEN_DOLLAR;
 
-    two_dol = change_in_cents / TWO_DOLLAR;
-    change_in_cents -= two_dol * TWO_DOLLAR;
+        five_dol = change_in_cents / FIVE_DOLLAR;
+        change_in_cents -= five_dol * FIVE_DOLLAR;
 
-    one_dol = change_in_cents / ONE_DOLLAR;
-    change_in_cents -= one_dol * ONE_DOLLAR;
+        two_dol = change_in_cents / TWO_DOLLAR;
+        change_in_cents -= two_dol * TWO_DOLLAR;
 
-    fifty_cent = change_in_cents / FIFTY_CENT;
-    change_in_cents -= fifty_cent * FIFTY_CENT;
+        one_dol = change_in_cents / ONE_DOLLAR;
+        change_in_cents -= one_dol * ONE_DOLLAR;
 
-    twenty_cent = change_in_cents / TWENTY_CENT;
-    change_in_cents -= twenty_cent * TWENTY_CENT;
+        fifty_cent = change_in_cents / FIFTY_CENT;
+        change_in_cents -= fifty_cent * FIFTY_CENT;
 
-    ten_cent = change_in_cents / TEN_CENT;
-    change_in_cents -= ten_cent * TEN_CENT;
+        twenty_cent = change_in_cents / TWENTY_CENT;
+        change_in_cents -= twenty_cent * TWENTY_CENT;
 
-    five_cent = change_in_cents / FIVE_CENT;
-    change_in_cents -= five_cent * FIVE_CENT;    
+        ten_cent = change_in_cents / TEN_CENT;
+        change_in_cents -= ten_cent * TEN_CENT;
 
-    cout << ten_dol << setw(50) << "Ten dollar note" << endl;
-    cout << five_dol << setw(50) << "Five dollar note" << endl;
-    cout << two_dol << setw(50) << "Five dollar note" << endl;
-    cout << one_dol << setw(50) << "Five dollar note" << endl;
-    cout << fifty_cent << setw(50) << "Five dollar note" << endl;
-    cout << twenty_cent << setw(50) << "Five dollar note" << endl;
-    cout << ten_cent << setw(50) << "Five dollar note" << endl;
-    cout << five_cent << setw(50) << "Five dollar note" << endl;
+        five_cent = change_in_cents / FIVE_CENT;
+        change_in_cents -= five_cent * FIVE_CENT;    
 
-    // display change $10, $5, $2, $1, 50c, 20c, 10c, 5
-
-    // $100 $50 or $20 big no no
+        if (ten_dol != 0){
+            cout << ten_dol << setw(50) << "Ten dollar notes" << endl;
+        }
+        if (five_dol != 0){
+            cout << five_dol << setw(50) << "Five dollar notes" << endl;
+        }
+        if (two_dol != 0){
+             cout << two_dol << setw(50) << "Two dollar coins" << endl;
+        }
+        if (one_dol != 0){
+            cout << one_dol << setw(50) << "One dollar coins" << endl;
+        }
+        if (fifty_cent != 0){
+            cout << fifty_cent << setw(50) << "Fifty cent coins" << endl;
+        }
+        if (twenty_cent != 0){
+            cout << twenty_cent << setw(50) << "Twenty cent coins" << endl;
+        }
+        if (ten_cent != 0){
+            cout << ten_cent << setw(50) << "Ten cent coins" << endl;
+        }
+        if (five_cent != 0){
+            cout << five_cent << setw(50) << "Five cent coins" << endl;
+        }
+    }
 
     system("PAUSE");
     return 0;
 }
-
-// price 25.50
-// payment 30.00
-// change 4.50
-// 2 x $2
-// 1 x $0.5
