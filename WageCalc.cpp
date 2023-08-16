@@ -6,7 +6,7 @@ using namespace std;
 int main(){
 
     char category;
-    int hours_worked;
+    double hours_worked;
     double HOURLY_RATE, TAX_RATE,net_wages, gross_wage, overtime;
     const double OVERTIME = 1.5;
     const int NORMAL_HOURS = 40;
@@ -18,8 +18,24 @@ int main(){
 
     cout << "Enter Category: 'M' for Management, 'F' for Floor Worker: ";
     cin >> category;
+    while ( tolower(category) != 'm' || tolower(category) != 'f'){
+        if ( tolower(category) == 'm' || tolower(category) == 'f'){
+            break;
+        }
+        else{
+            cout << "Invalid Category, please try again: ";
+            cin >> category;
+        }
+    }
+
     cout << "Enter Hours Worked: ";
     cin >> hours_worked;
+    while (cin.fail()){
+        cin.clear();
+        cin.ignore();
+        cout << "Please enter a number and try again: ";
+        cin >> hours_worked;
+    }
 
     switch(tolower(category)){
         case 'm' : {
@@ -43,6 +59,7 @@ int main(){
         gross_wage = hours_worked * HOURLY_RATE;    
         net_wages = gross_wage - (gross_wage * TAX_RATE);
     }
+
     else {
         gross_wage = NORMAL_HOURS * HOURLY_RATE;    
         overtime = (hours_worked - 40) * HOURLY_RATE * OVERTIME;
