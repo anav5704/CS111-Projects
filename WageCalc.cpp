@@ -19,13 +19,13 @@ int main(){
     cout << "Enter Category: 'M' for Management, 'F' for Floor Worker: ";
     cin >> category;
     while ( tolower(category) != 'm' || tolower(category) != 'f'){
-        if ( tolower(category) == 'm' || tolower(category) == 'f'){
-            break;
-        }
-        else{
+        // if ( tolower(category) == 'm' || tolower(category) == 'f'){
+        //     break;
+        // }
+        // else{
             cout << "Invalid Category, please try again: ";
             cin >> category;
-        }
+        // }
     }
 
     cout << "Enter Hours Worked: ";
