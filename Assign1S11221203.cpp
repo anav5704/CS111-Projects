@@ -1,5 +1,5 @@
-// -----------------------------------------------------------------------------------------------------------//
-// Pr0ject:            Assignment 1, Semester 2, 2023                                                         //
+// ---------------------------------------------------------------------------------------------------------- //
+// Project:            Assignment 1, Semester 2, 2023                                                         //
 // Name:               Anav Chand                                                                             //
 // ID:                 S11221203                                                                              //
 // Date:               19/08/2023                                                                             //
@@ -9,15 +9,14 @@
 //                                                                                                            //
 // I have used "cout << endl;" quite a lot that may seem random but it is to keep the output clean            //
 // The use of switch cases over if statements was just my pereference, the syntax looks cleaner               //
-// -----------------------------------------------------------------------------------------------------------//
+// ---------------------------------------------------------------------------------------------------------- //
 
 #include <iostream>
 #include <iomanip>
 #include <string>
 using namespace std;
 
-int main()
-{
+int main(){
     // Constant declerations
     const int MIN_AGE = 10;
     const int MAX_AGE = 200;
@@ -67,26 +66,24 @@ int main()
     // Set output for all douubles to 2 decimal places
     cout << fixed << setprecision(2);
 
-    cout << "+------------------------------------------------+\n";
-    cout << "|      Welcome to the Fitness and Diet app!      |\n";
-    cout << "+------------------------------------------------+\n\n";
+    cout << "+------------------------------------------------+\n"
+         << "|      Welcome to the Fitness and Diet app!      |\n"
+         << "+------------------------------------------------+\n\n";
 
     cout << "Enter S to start or Q to exit: ";
     cin >> decision;
 
-    while (tolower(decision) != 's' && tolower(decision) != 'q')
-    {
+    while (tolower(decision) != 's' && tolower(decision) != 'q'){
         cin.clear();
         string dummy;
         getline(cin, dummy);
-        cout << endl;
-        cout << "Oops, something went wrong." << endl;
-        cout << "Enter either \"S\" or \"Q\": ";
+        cout << endl
+             << "Oops, something went wrong." << endl
+             << "Enter either \"S\" or \"Q\": ";
         cin >> decision;
     }
 
-    switch (tolower(decision))
-    {
+    switch (tolower(decision)){
     case 's':
         continue_running = true;
         break;
@@ -95,8 +92,7 @@ int main()
         break;
     }
 
-    while (continue_running)
-    {
+    while (continue_running){
         cout << "Enter your first name: ";
         cin >> first_name;
         // Get the first letter of the name using substring. O is the starting position and 1 is the length
@@ -110,8 +106,7 @@ int main()
         cout << "Enter your age (years): ";
         cin >> age;
 
-        while (cin.fail() || (age < MIN_AGE || age > MAX_AGE))
-        {
+        while (cin.fail() || (age < MIN_AGE || age > MAX_AGE)){
             cin.clear();
             // Dummy value to stash age value if a string was entered
             string dummy;
@@ -132,9 +127,9 @@ int main()
             cin.clear();
             string dummy;
             getline(cin, dummy);
-            cout << endl;
-            cout << "Oops, something went wrong." << endl;
-            cout << "Enter either \"M\" or \"F\": ";
+            cout << endl
+                 << "Oops, something went wrong." << endl
+                 << "Enter either \"M\" or \"F\": ";
             cin >> gender;
         }
 
@@ -156,10 +151,10 @@ int main()
             cin.clear();
             string dummy;
             getline(cin, dummy);
-            cout << endl;
-            cout << "Oops, something went wrong." << endl;
-            cout << "Try entering a number like \"170\"" << endl;
-            cout << "Please re-enter your height: ";
+            cout << endl
+                 << "Oops, something went wrong." << endl
+                 << "Try entering a number like \"170\"" << endl
+                 << "Please re-enter your height: ";
             cin >> height;
         }
 
@@ -171,48 +166,48 @@ int main()
             cin.clear();
             string dummy;
             getline(cin, dummy);
-            cout << endl;
-            cout << "Oops, something went wrong." << endl;
-            cout << "Try entering a number like \"75\"" << endl;
+            cout << endl
+                 << "Oops, something went wrong." << endl
+                 << "Try entering a number like \"75\"" << endl;
             cout << "Please re-enter your weight: ";
             cin >> weight;
         }
 
-        cout << endl;
-        cout << "What is your activity level?" << endl;
-        cout << "A) Sedentary" << endl;
-        cout << "B) Lightly active" << endl;
-        cout << "C) Moderately active" << endl;
-        cout << "D) Very active" << endl;
-        cout << "E) Super active" << endl;
-        cout << "Please enter your activity level (A / B / C / D / E): ";
+        cout << endl
+             << "What is your activity level?" << endl
+             << "A) Sedentary" << endl
+             << "B) Lightly active" << endl
+             << "C) Moderately active" << endl
+             << "D) Very active" << endl
+             << "E) Super active" << endl
+             << "Please enter your activity level (A / B / C / D / E): ";
         cin >> activity_level;
 
         while (tolower(activity_level) != 'a' && tolower(activity_level) != 'b' && tolower(activity_level) != 'c' && tolower(activity_level) != 'd' && tolower(activity_level) != 'e'){
             cin.clear();
             string dummy;
             getline(cin, dummy);
-            cout << endl;
-            cout << "Oops, something went wrong." << endl;
-            cout << "Enter either \"A\", \"B\", \"C\", \"D\" or \"E\": ";
+            cout << endl
+                 << "Oops, something went wrong." << endl
+                 << "Enter either \"A\", \"B\", \"C\", \"D\" or \"E\": ";
             cin >> activity_level;
         }
 
-        cout << endl;
-        cout << "What is your goal?" << endl;
-        cout << "A) Lose weight" << endl;
-        cout << "B) Maintain weight" << endl;
-        cout << "C) Gain muscle" << endl;
-        cout << "Please enter your user_goal (A / B / C): ";
+        cout << endl
+             << "What is your goal?" << endl
+             << "A) Lose weight" << endl
+             << "B) Maintain weight" << endl
+             << "C) Gain muscle" << endl
+             << "Please enter your user_goal (A / B / C): ";
         cin >> user_goal;
 
         while (tolower(user_goal) != 'a' && tolower(user_goal) != 'b' && tolower(user_goal) != 'c'){
             cin.clear();
             string dummy;
             getline(cin, dummy);
-            cout << endl;
-            cout << "Oops, something went wrong." << endl;
-            cout << "Enter either \"A\", \"B\" or \"C\": ";
+            cout << endl
+                 << "Oops, something went wrong." << endl
+                 << "Enter either \"A\", \"B\" or \"C\": ";
             cin >> user_goal;
         }
 
@@ -246,30 +241,30 @@ int main()
                 break;
         }
 
-        cout << endl;
-        cout << "Dear " << title << " " << first_name_initial << ". " << surname << endl << endl;
-        cout << "Here is your report:" << endl;
-        cout << "Your Bascal Metabolic Rate (BMR) is " << bmr << " calories/day" << endl;
-        cout << "Your Total Dietary Energy Expenditure (TDEE) is " << tdee << " calories/day" << endl;
+        cout << endl
+             << "Dear " << title << " " << first_name_initial << ". " << surname << endl << endl
+             << "Here is your report:" << endl
+             << "Your Bascal Metabolic Rate (BMR) is " << bmr << " calories/day" << endl
+             << "Your Total Dietary Energy Expenditure (TDEE) is " << tdee << " calories/day" << endl;
 
         // Logic for recommendations
         switch (tolower(user_goal)){
             case 'a':{
                 daily_caloric_intake = tdee - CALORIC_INTAKE_CONSTANT;
-                cout << "Dietary recommendation: Your daily intake target should be " << daily_caloric_intake << " calories/day in order to lose weight" << endl;
-                cout << "Fitness recommendation: Combine a balanced diet with cardio exercises for effective weight loss" << endl;
+                cout << "Dietary recommendation: Your daily intake target should be " << daily_caloric_intake << " calories/day in order to lose weight" << endl
+                     << "Fitness recommendation: Combine a balanced diet with cardio exercises for effective weight loss" << endl;
                 break;
             }
             case 'b':{
                 daily_caloric_intake = tdee;
-                cout << "Dietary recommendation: Your intake target should be " << daily_caloric_intake << " calories/day in order to maintain your weight" << endl;
-                cout << "Fitness recommendation: Continue with a balanced diet and exercises to maintain your weight" << endl;
+                cout << "Dietary recommendation: Your intake target should be " << daily_caloric_intake << " calories/day in order to maintain your weight" << endl
+                     << "Fitness recommendation: Continue with a balanced diet and exercises to maintain your weight" << endl;
                 break;
             }
             case 'c':{
                 daily_caloric_intake = tdee + CALORIC_INTAKE_CONSTANT;
-                cout << "Dietary recommendation: Your intake target should be " << daily_caloric_intake << " calories/day in order to gain muscle" << endl;
-                cout << "Fitness recommendation: Include more protein in your diet and focus on strength training exercises" << endl;
+                cout << "Dietary recommendation: Your intake target should be " << daily_caloric_intake << " calories/day in order to gain muscle" << endl
+                     << "Fitness recommendation: Include more protein in your diet and focus on strength training exercises" << endl;
                 break;
             }
         }
@@ -282,9 +277,9 @@ int main()
             cin.clear();
             string dummy;
             getline(cin, dummy);
-            cout << endl;
-            cout << "Oops, something went wrong." << endl;
-            cout << "Enter either \"R\" or \"Q\": ";
+            cout << endl
+                 << "Oops, something went wrong." << endl
+                 << "Enter either \"R\" or \"Q\": ";
             cin >> decision;
         }
 
@@ -298,13 +293,12 @@ int main()
         }
     }
 
-    cout << endl;
-    cout << "+----------------------------------------------------------+" << endl;
-    cout << "|      Thank you for using the Fitness and Diet app!       |" << endl;
-    cout << "|       Until next time, stay healty and stay safe.        |" << endl;
-    cout << "+----------------------------------------------------------+" << endl<< endl;
-
-    cout << "Exiting..." << endl;
+    cout << endl
+         << "+----------------------------------------------------------+" << endl
+         << "|      Thank you for using the Fitness and Diet app!       |" << endl
+         << "|       Until next time, stay healty and stay safe.        |" << endl
+         << "+----------------------------------------------------------+" << endl << endl
+         << "Exiting..." << endl;
 
     return 0;
 }
