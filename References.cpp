@@ -1,16 +1,18 @@
 #include<iostream>
 using namespace std;
 
-void changeTo5(int& a, int& b){
-    a = 5;
-    b = 5;
+void swap(int a, int& b){
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
 }
 
 int main(){
 
-    int x = 10, y = 10;
+    int x = 9, y = 6;
 
-    changeTo5( x, y);
+    swap( x, y);
 
     cout << "X: " << x << endl;
     cout << "Y: " << y << endl;

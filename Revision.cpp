@@ -11,10 +11,18 @@ double operate(double a, double b){
 
 int main()
 {
-    int x = 5, y = 2;
-    double n = 5.0, m = 2.0;
-    cout << operate(x, y) << "\t";
-    cout << operate(n, m);
+    // int x = 5, y = 2;
+    // double n = 5.0, m = 2.0;
+    // cout << operate(x, y) << "\t";
+    // cout << operate(n, m);
+    
+    int x = 0, y = 11;
+    do {
+        cout << "Tik Tok" << endl;
+        x++;
+    }
+    while(x <= y);
+
     
     return 0;
 }
