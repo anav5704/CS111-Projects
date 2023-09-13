@@ -29,6 +29,7 @@ int main()
     }
     cout << "Sum using for loop (using modulus) is\t" << sum3 << endl;
 
+
     // Using do while (using modulus)
     int k = 0;
     int sum4 = 0;
@@ -63,6 +64,16 @@ int main()
         if(j % 9 == 0)
             cout << j << endl;
     }
+
+
+    // Using do while (using modulus)    int k = 0;
+    cout << "\nDo While with Modulus:" << endl;
+    int l = 99;
+    do {
+         if(l % 9 == 0)
+            cout << l << endl;
+        l--;
+    }while(l >= 1);
 
     return 0;
 }
