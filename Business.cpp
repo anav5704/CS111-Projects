@@ -17,19 +17,19 @@ int main()
     }
 
     else{
-    cout << "Please enter your name: ";
-    cin >> owner;
-    writeFile << owner << " ";
+        cout << "Please enter your name: ";
+        cin >> owner;
+        writeFile << owner << " ";
 
-    cout << "Please enter your business name: ";
-    cin >> business;
-    writeFile << business << " ";
+        cout << "Please enter your business name: ";
+        cin >> business;
+        writeFile << business << " ";
 
-    cout << "Please enter the business type: ";
-    cin >> type;
-    writeFile << type << endl;
+        cout << "Please enter the business type: ";
+        cin >> type;
+        writeFile << type << endl;
 
-    writeFile.close();
+        writeFile.close();
     }
 
     return 0;
