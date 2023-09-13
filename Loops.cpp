@@ -4,43 +4,46 @@ using namespace std;
 int main()
 {
     // Using for loop (no modulus)
-    cout << "For Loop:" << endl;
-    for(int i = 0; i <= 100; i += 7){
-        cout << i << endl;
+    int sum1 = 0;
+    for(int i = 0; i <= 1000; i += 7){
+       sum1 += i;
     }
+    cout << "\nSum using for loop (no modulus) is\t" << sum1 << endl;
 
 
     // Using while loop (no modulus)
+    int sum2 = 0;
     int i = 0;
-    cout << "While Loop:" << endl;
-    while(i <= 100){
-        cout << i << endl;
+    while(i <= 1000){
+        sum2 += i;
         i += 7;
     }
+    cout << "Sum using while loop (no modulus) is\t" << sum2 << endl;
 
     // Using for loop (using modulus)
-    cout << "For Loop with Modulus:" << endl;
-    for(int i = 0; i <= 100; i++){
+    int sum3;
+    for(int i = 0; i <= 1000; i++){
         if(i % 7 == 0)
-            cout << i << endl;
+            sum3 += i;
     }
+    cout << "Sum using for loop (using modulus) is\t" << sum3 << endl;
 
     // Using for loop (no modulus)
-    cout << "For Loop:" << endl;
+    cout << "\nFor Loop:" << endl;
     for(int j = 99; j >= 1; j -= 9){
         cout << j << endl;
     }
 
     // Using while loop (no modulus)
     int j = 99;
-    cout << "While Loop:" << endl;
+    cout << "\nWhile Loop:" << endl;
     while(j >= 1){
         cout << j << endl;
         j -= 9;
     }
 
     // Using for loop (using modulus)
-    cout << "For Loop with Modulus:" << endl;
+    cout << "\nFor Loop with Modulus:" << endl;
     for(int j = 99; j >= 1; j--){
         if(j % 9 == 0)
             cout << j << endl;
