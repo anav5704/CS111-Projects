@@ -9,7 +9,6 @@ int main(){
     };
 
     class Vehicle {
-
         private:
             string brand;
             engine engine;       
@@ -54,8 +53,11 @@ int main(){
                 }
     };
 
-    Car anavsRide("Bugatti", 'W', 16, "Mistral", 2021);
-    anavsRide.get();
+    Car anavsCar("Bugatti", 'W', 16, "Mistral", 2021);
+    anavsCar.get();
+
+    Vehicle truck("Toyota", 'V', 2);
+    truck.get();
 
     system("PAUSE");
     return 0;
