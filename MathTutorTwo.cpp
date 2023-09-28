@@ -64,7 +64,7 @@ bool check_linear(int guess, int answer, int& score)
 bool check_quadratic(int guess1, int guess2, int answer1, int answer2, int& score)
 // bool check_quadratic(int guess, int answer1, int answer2, int& score)
 {
-    if((guess1 == answer1 || guess1 == answer2) && (guess2 == answer1 || guess2 == answer2))
+    if((guess1 != guess2) && (guess1 == answer1 || guess1 == answer2) && (guess2 == answer1 || guess2 == answer2))
     // if(guess == answer1 || guess == answer2)
     {
         cout << "Great!\n\n";
@@ -122,7 +122,7 @@ int main()
             int coeff_1  = a + b; //Compute the coefficients in the equation
             int coeff_2  = a * b;
             cout << "\nWhat is a solution to\n";
-            cout << "x^2 " << signchar(coeff_1) << " " << fabs(coeff_1) << " x "  << signchar(coeff_2) << " " << fabs(coeff_2) << " = 0\n"; //Use function to fix formatting.
+            cout << "x^2 " << signchar(coeff_1) << " " << fabs(coeff_1) << "x "  << signchar(coeff_2) << " " << fabs(coeff_2) << " = 0\n"; //Use function to fix formatting.
             answer1 = readint();// Use function to validate
             answer2 = readint();// Use function to validate
 
