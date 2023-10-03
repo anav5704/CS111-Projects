@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "**/frontmatter.json": "jsonc",
+        "**/.frontmatter/config/*.json": "jsonc",
+        "string_view": "cpp",
+        "vector": "cpp"
+    }
+}
