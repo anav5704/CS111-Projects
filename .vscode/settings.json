@@ -5,6 +5,7 @@
         "string_view": "cpp",
         "vector": "cpp",
         "*.tcc": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "fstream": "cpp"
     }
 }
