@@ -6,6 +6,7 @@
         "vector": "cpp",
         "*.tcc": "cpp",
         "iosfwd": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "iostream": "cpp"
     }
 }
