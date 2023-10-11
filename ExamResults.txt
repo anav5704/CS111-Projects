@@ -3,5 +3,3 @@ Name	Makrs
 Indee	95
 Anav	92
 Rohan	90
-Veer    95
-Soni    93

@@ -28,7 +28,7 @@ int main()
     string name, headerOmit;  
     int mark;   
 
-    getline(read, headerOmit); // Omit Header @indeevar 😉😉😉😉😉
+    getline(read, headerOmit); // Om`it Header @indeevar 😉😉😉😉😉
 
     while(read >> name >> mark){
        cout << name << ": " << mark + 5 << endl;
