@@ -2,12 +2,11 @@
 #include<iomanip>
 using namespace std;
 
-int readOption() // takes in no parameters
-{
+int validateInput(int upperLimit) { // takes in no parameters 
     int x;
     cin >> x;
 
-    while(cin.fail() || (x < 1 || x > 4)) // validates x by asking user to re-enter until x is number and within range
+    while(cin.fail() || (x < 1 || x > upperLimit)) // validates x by asking user to re-enter until x is number and within range
     {
         cin.clear();
         // Declare dummy string
@@ -17,7 +16,7 @@ int readOption() // takes in no parameters
         getline(cin, dummy);
         cout << endl;
         cout << "Oops, you entered an invalid option." << endl;
-        cout << "Enter either \"1\", \"2\", \"3\"  or \"4\": ";
+        cout << "Please try again: ";
         cin >> x;
     }
 
@@ -60,18 +59,20 @@ double calculateTotal(double price, double count){
 
 int main()
 {
-    // Constants
+    // Constants initializtion
     const char SENTINEL = 'Q';
+    const int DESTINATION_COUNT = 4;
+    const int ORDER_LIMIT = 25;
 
-    // Variables
+    // Variable declerations
     bool continue_running = true;
     char decision;
     char input;
     int destnationChoice;
     string destnation;
     double price;
-    double orderItemCount;
-    double orderAmount;
+    double orderQuantity;
+    double totalPrice;
 
     // Set output for all douubles to 2 decimal places
     cout << fixed << setprecision(2);
@@ -84,6 +85,7 @@ int main()
 
     while(continue_running){
 
+        // Table for destination options
         cout << left << setw(30) << "\nWhich destination would you like to deliver to? " << endl << endl
                      << setw(30) << "   Destination" << setw(20) << "Price ($)" << endl
                      << setw(30) << "   ------------------------------------" << endl
@@ -92,9 +94,10 @@ int main()
                      << setw(30) << "3. Sigatoka - Nadi area" << setw(20) << "25.00" << endl
                      << setw(30) << "4. Lautoka to Tavua" << setw(20) << "35.00" << endl << endl;
 
-        cout << "Chose destnation: ";
-        destnationChoice = readOption();
+        cout << "Choose destnation: ";
+        destnationChoice = validateInput(DESTINATION_COUNT);
 
+        // Set destination and price based on selected option
         switch (destnationChoice) {
             case 1:
                 destnation = "Suva-Nausori corridor";
@@ -116,11 +119,11 @@ int main()
         }
 
         cout << "Enter number of items ordered: ";
-        orderItemCount = readOption();
+        orderQuantity = validateInput(ORDER_LIMIT);
 
-        orderAmount = calculateTotal(price, orderItemCount);
+        totalPrice = calculateTotal(price, orderQuantity);
 
-        cout << "Fees for " << orderItemCount << " items to " << destnation << " is $" << orderAmount << endl;
+        cout << "Fees for " << orderQuantity << " items to " << destnation << " is $" << totalPrice << endl;
 
         appStartQuit(continue_running);
     }
