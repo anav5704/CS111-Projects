@@ -2,17 +2,14 @@
 #include<iomanip>
 using namespace std;
 
-int validateInput(int upperLimit) { // takes in no parameters 
+int validateInput(int upperLimit) { // Takes upper limit for range umber as parameter
     int x;
     cin >> x;
 
-    while(cin.fail() || (x < 1 || x > upperLimit)) // validates x by asking user to re-enter until x is number and within range
+    while(cin.fail() || (x < 1 || x > upperLimit)) // Validates x by asking user to re-enter until x is number and within range
     {
-        cin.clear();
-        // Declare dummy string
-        string dummy;
-        // Stash away the incorrect input
-        // Getline is used incase the input was a long string
+        cin.clear(); // Declare dummy string
+        string dummy; // Stash away the incorrect input. Getline is used incase the input was a long string
         getline(cin, dummy);
         cout << endl;
         cout << "Oops, you entered an invalid option." << endl;
@@ -20,10 +17,10 @@ int validateInput(int upperLimit) { // takes in no parameters
         cin >> x;
     }
 
-    return x; // returns x after it is confirmed to be a nunber
+    return x; // returns x after it is confirmed to be a nunber and within rnage
 }
 
-void appStartQuit(bool& continue_running){
+void appStartQuit(bool& continue_running){ // Takes a boolean as reference parameter
     char decision;
 
     cout << "\nEnter S to start or Q to exit: ";
@@ -39,7 +36,7 @@ void appStartQuit(bool& continue_running){
         cin >> decision;
     }
 
-    switch (tolower(decision)){
+    switch (tolower(decision)){ // Changes boolean depending on user input
         case 's':
             continue_running = true;
             break;
@@ -51,9 +48,9 @@ void appStartQuit(bool& continue_running){
     }
 }
 
-double calculateTotal(double price, double count){
+double calculateTotal(double price, double quantity){ // Takes price and quantity as parameter
     double total;
-    total = price * count;
+    total = price * quantity;
     return total;
 }
 
@@ -74,12 +71,11 @@ int main()
     double orderQuantity;
     double totalPrice;
 
-    // Set output for all douubles to 2 decimal places
-    cout << fixed << setprecision(2);
+    cout << fixed << setprecision(2); // Set output for all douubles to 2 decimal places
 
-    cout << "+--------------------------------------------+\n"
+    cout << "+---------------------------------------------+\n"
          << "|      Welcome to the the Fiji Eats app!      |\n"
-         << "+--------------------------------------------+\n\n";
+         << "+---------------------------------------------+\n";
 
   appStartQuit(continue_running);
 
@@ -96,9 +92,8 @@ int main()
 
         cout << "Choose destnation: ";
         destnationChoice = validateInput(DESTINATION_COUNT);
-
-        // Set destination and price based on selected option
-        switch (destnationChoice) {
+       
+        switch (destnationChoice) { // Set destination and price based on selected option
             case 1:
                 destnation = "Suva-Nausori corridor";
                 price = 10.00;
@@ -118,17 +113,18 @@ int main()
         // No default is needed as input is already validated
         }
 
-        cout << "Enter number of items ordered: ";
+        cout << "Enter number of items ordered (" << ORDER_LIMIT << " max): ";
         orderQuantity = validateInput(ORDER_LIMIT);
 
         totalPrice = calculateTotal(price, orderQuantity);
 
-        cout << "Fees for " << orderQuantity << " items to " << destnation << " is $" << totalPrice << endl;
+        cout << "\nFees for " << orderQuantity << " items to " << destnation << " is $" << totalPrice << endl;
 
         appStartQuit(continue_running);
     }
 
-    cout << "+------------------------------------------------------+\n"
+    cout << endl
+         << "+------------------------------------------------------+\n"
          << "|      Thank you for using the the Fiji Eats app!      |\n"
          << "+------------------------------------------------------+\n\n";
 
