@@ -55,7 +55,7 @@ double calculateTotal(double price, double quantity){ // Takes price and quantit
 }
 
 int main(){
-    // Constants initializtion
+    // Constants initializations
     const char SENTINEL = 'Q';
     const int DESTINATION_COUNT = 4;
     const int ORDER_LIMIT = 25;
