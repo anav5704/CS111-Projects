@@ -65,8 +65,8 @@ int main()
     bool continue_running = true;
     char decision;
     char input;
-    int destnationChoice;
-    string destnation;
+    int destinationChoice;
+    string destination;
     double price;
     double orderQuantity;
     double totalPrice;
@@ -90,24 +90,24 @@ int main()
                      << setw(30) << "3. Sigatoka - Nadi area" << setw(20) << "25.00" << endl
                      << setw(30) << "4. Lautoka to Tavua" << setw(20) << "35.00" << endl << endl;
 
-        cout << "Choose destnation: ";
-        destnationChoice = validateInput(DESTINATION_COUNT);
+        cout << "Choose destination: ";
+        destinationChoice = validateInput(DESTINATION_COUNT);
        
-        switch (destnationChoice) { // Set destination and price based on selected option
+        switch (destinationChoice) { // Set destination and price based on selected option
             case 1:
-                destnation = "Suva-Nausori corridor";
+                destination = "Suva-Nausori corridor";
                 price = 10.00;
                 break;
             case 2:
-                destnation = "Lami town";
+                destination = "Lami town";
                 price = 15.00;
                 break;
             case 3:
-                destnation = "Sigatoka - Nadi area";
+                destination = "Sigatoka - Nadi area";
                 price = 25.00;
                 break;
             case 4:
-                destnation = "Lautoka to Tavua";
+                destination = "Lautoka to Tavua";
                 price = 35.00;
                  break;
         // No default is needed as input is already validated
@@ -118,7 +118,7 @@ int main()
 
         totalPrice = calculateTotal(price, orderQuantity);
 
-        cout << "\nFees for " << orderQuantity << " items to " << destnation << " is $" << totalPrice << endl;
+        cout << "\nFees for " << orderQuantity << " items to " << destination << " is $" << totalPrice << endl;
 
         appStartQuit(continue_running);
     }
