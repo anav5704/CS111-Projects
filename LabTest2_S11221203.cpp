@@ -54,8 +54,7 @@ double calculateTotal(double price, double quantity){ // Takes price and quantit
     return total;
 }
 
-int main()
-{
+int main(){
     // Constants initializtion
     const char SENTINEL = 'Q';
     const int DESTINATION_COUNT = 4;
@@ -80,7 +79,6 @@ int main()
   appStartQuit(continue_running);
 
     while(continue_running){
-
         // Table for destination options
         cout << left << setw(30) << "\nWhich destination would you like to deliver to? " << endl << endl
                      << setw(30) << "   Destination" << setw(20) << "Price ($)" << endl
