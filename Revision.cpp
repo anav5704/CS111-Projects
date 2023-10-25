@@ -1,28 +1,24 @@
 #include<iostream>
 using namespace std;
 
-int operate(int a, int b){
-    return a * b;
-}
-
-double operate(double a, double b){
-    return a / b;
-}
-
 int main()
 {
-    // int x = 5, y = 2;
-    // double n = 5.0, m = 2.0;
-    // cout << operate(x, y) << "\t";
-    // cout << operate(n, m);
-    
-    int x = 0, y = 11;
-    do {
-        cout << "Tik Tok" << endl;
-        x++;
+    for(int i = 0; i < 4; i++){
+        for(int j = i; j < 4; j++){
+            cout << " * ";
+        }
+        cout << endl;
     }
-    while(x <= y);
 
-    
+    int data[5] = {1, 23, 100, -10, 54};
+    int min = data[0], max = data[0];
+
+    for(int i = 0;  i < 5; i++){
+        if(data[i] < min) min = data[i];
+        else if(data[i] > max) max = data[i];
+    }
+
+    cout << "Min value: " << min << ", Max value: " << max << endl;
+
     return 0;
 }
