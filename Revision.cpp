@@ -20,5 +20,17 @@ int main()
 
     cout << "Min value: " << min << ", Max value: " << max << endl;
 
+    int a = 2, b = 1, c =0;
+
+    while((a + 2) >= c){
+        c = a + b;
+        cout << a + 2 << b;
+        cout << c << ", ";
+        a = b;
+        b = c;
+    }
+
+    cout << a + b;
+
     return 0;
 }

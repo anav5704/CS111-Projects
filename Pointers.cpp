@@ -7,7 +7,7 @@ int main()
     int *Pnumber = &number;
 
     cout << "Value: " << *Pnumber << endl;
-    cout << "Adress: " << Pnumber << endl;
+    cout << "Adress: " << &number << endl;
 
     return 0;
 }

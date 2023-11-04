@@ -17,7 +17,7 @@ int main()
     write << "Anav\t92\n";       
     write << "Rohan\t90";      
 
-    write.close();                   
+    write.close();       
 
 
     //---------------- Reading from file ----------------//
@@ -28,7 +28,7 @@ int main()
     string name, headerOmit;  
     int mark;   
 
-    getline(read, headerOmit); // Om`it Header @indeevar 😉😉😉😉😉
+    getline(read, headerOmit); // Omit Header @indeevar 😉😉😉😉😉
 
     while(read >> name >> mark){
        cout << name << ": " << mark + 5 << endl;

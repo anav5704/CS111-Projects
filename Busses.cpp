@@ -2,6 +2,32 @@
 #include<iomanip>
 using namespace std;
 
+const int COLS = 7;
+
+void printTable(int array[][COLS], string data[], int rows){
+    for(int i = 0; i < rows; i++){
+        cout << setw(10) << data[i];
+
+        for(int j = 0; j < COLS; j++){
+            cout << setw(7) << array[i][j];
+        }
+
+        cout << endl;
+    }
+}
+
+int sum(int array[][COLS], int rows){
+    int  sum = 0;
+
+    for(int i = 0; i < rows; i++){
+        for(int j = 0; j < COLS; j++){
+            sum += array[i][j];
+        }
+    }
+
+    return sum;
+}
+
 int main()
 {
     const int ROWS = 4;
@@ -18,13 +44,8 @@ int main()
     for(int k = 0; k < COLS; k++) cout << left << setw(7) << days[k];
     cout << endl;
 
-    for(int i = 0; i < ROWS; i++){
-        cout << left << setw(10) << locations[i];
-        for(int j = 0; j < COLS; j++){
-            cout << left << setw(7) << timeTable[i][j];
-        }
-        cout << endl;
-    }
+  printTable(timeTable, days, ROWS);
+  cout << "The sum is: " << sum(timeTable, ROWS);
 
     return 0;
 }
