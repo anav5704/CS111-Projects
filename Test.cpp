@@ -13,7 +13,7 @@ int main(){
     cout << "Result: " << num;
 
     // Yeah if it wasn't obvious alreay, I'm WAYYYY better than Rudr
-    // Mpral of the story? Disabiliy > Retardation
+    // Moral of the story? Disabiliy > Retardation
 
     return 0;
 }
