@@ -9,3 +9,8 @@ Once successfully compiled, you can execute the output file using:
 ```
 ./<output_file_name> 
 ```
+
+## Laerning Resources
+- [C++ tutorial for beginners](https://www.youtube.com/watch?v=vLnPwxZdW4Y)
+- [C++ in 100 seconds](https://www.youtube.com/watch?v=MNeX4EGtR5Y)
+- [C++ roadmap](https://roadmap.sh/cpp)
