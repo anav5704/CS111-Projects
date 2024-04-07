@@ -8,14 +8,9 @@ int main()
     // 3)
 
     // Using a for loop to iterate from 1 to 20
-    for (int i = 1; i <= 20; ++i)
+    for (int i = 0; i <= 20; i += 2)
     {
-        // Checking if the current number is even
-        if (i % 2 == 0)
-        {
-            // Printing the even number
-            cout << i << " ";
-        }
+        cout << i << " ";
     }
 
     // 4)
@@ -26,7 +21,6 @@ int main()
 
     // Variables
     int row_col;
-    int input;
 
     cout << "Enter the number of rows and columns (1 - 5): ";
     cin >> row_col;
@@ -46,7 +40,7 @@ int main()
         }
 
         // Check if input was out of range
-        else if (input < LOWER_LIMIT || input > UPPER_LIMIT)
+        else if (row_col < LOWER_LIMIT || row_col > UPPER_LIMIT)
         {
             cin.clear();
             cout << "Oops! Something went wrong." << endl
