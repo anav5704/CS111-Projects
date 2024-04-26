@@ -9,7 +9,7 @@ int main()
     //---------------- Writing to a file ----------------//
 
     ofstream write;              
-    write.open("ExamResults.txt");         
+    write.open("exam-results.txt");         
 
     write << "Name\tMakrs\n\n";   
 
@@ -23,7 +23,7 @@ int main()
     //---------------- Reading from file ----------------//
 
     ifstream read;                  
-    read.open("ExamResults.txt");           
+    read.open("exam-results.txt");           
 
     string name, headerOmit;  
     int mark;   

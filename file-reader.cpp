@@ -12,7 +12,7 @@ int main()
     int data[CAPACITY];
 
     ifstream readFile;
-    readFile.open("Data.txt");
+    readFile.open("num-data.txt");
 
     while( readFile >> temp) {
         data[size] = temp;

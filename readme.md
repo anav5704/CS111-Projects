@@ -1,4 +1,4 @@
-![C++ Projects](https://github.com/anav5704/CS111-Projects/blob/main/Docs/CS111.png)
+![C++ Projects](https://github.com/anav5704/CS111-Projects/blob/main/docs/CS111-header.png)
 
 ## Getting Started
 First fork and clone the repo. Make sure you have the G++ compiler installed. Then, choose the program you want to run and compile it:

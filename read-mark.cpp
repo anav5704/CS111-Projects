@@ -14,7 +14,7 @@ int main()
     string headerOmitter;
 
     ifstream readFile;
-    readFile.open("ExamResults.txt");
+    readFile.open("exam-results.txt");
 
     if(!readFile) cout << "File not found" << endl;
 
