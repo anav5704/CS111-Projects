@@ -5,24 +5,14 @@ using namespace std;
 
 int main()
 {
-    // 3)
-
-    // Using a for loop to iterate from 1 to 20
-    for (int i = 0; i <= 20; i += 2)
-    {
-        cout << i << " ";
-    }
-
-    // 4)
-
     // Constants
     const int LOWER_LIMIT = 1;
-    const int UPPER_LIMIT = 5;
+    const int UPPER_LIMIT = 10;
 
     // Variables
     int row_col;
 
-    cout << "Enter the number of rows and columns (1 - 5): ";
+    cout << "Enter the number of rows and columns (1 - 10): ";
     cin >> row_col;
 
     // Validate input
@@ -51,6 +41,8 @@ int main()
     }
 
     // Print pattern
+    cout << "Using 2 loops" << endl;
+
     for (int i = 0; i < row_col; i++)
     {
         for (int j = 0; j <= i && j < row_col; j++)
@@ -58,6 +50,13 @@ int main()
             cout << "* ";
         }
         cout << endl;
+    }
+
+    // Print using only 1 loop
+    cout << "\nUsing 1 loop" << endl;
+    for (string triangle = "*"; triangle.length() <= (UPPER_LIMIT * 2) - 1; triangle += " *")
+    {
+        cout << triangle << endl;
     }
 
     return 0;
