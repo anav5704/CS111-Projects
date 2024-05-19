@@ -1,5 +1,5 @@
-Name	Makrs
+Name	Score
 
-Indee	95
-Anav	92
-Rohan	90
+Tevita	100
+Mere	90
+Sarah	95

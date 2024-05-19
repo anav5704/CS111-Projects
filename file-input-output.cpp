@@ -1,40 +1,38 @@
-#include<iostream>
-#include<fstream>
-#include<iomanip>                   // Needed for Getline()
+#include <iostream>
+#include <fstream>
 using namespace std;
-
 
 int main()
 {
     //---------------- Writing to a file ----------------//
 
-    ofstream write;              
-    write.open("exam-results.txt");         
+    ofstream writeFile;
+    writeFile.open("exam-results.txt");
 
-    write << "Name\tMakrs\n\n";   
+    writeFile << "Name\tScore\n\n";
 
-    write << "Indee\t95\n";       
-    write << "Anav\t92\n";       
-    write << "Rohan\t90";      
+    writeFile << "Tom\t100\n";
+    writeFile << "Mere\t90\n";
+    writeFile << "Sarah\t95";
 
-    write.close();       
-
+    writeFile.close();
 
     //---------------- Reading from file ----------------//
 
-    ifstream read;                  
-    read.open("exam-results.txt");           
+    ifstream readFile;
+    readFile.open("exam-results.txt");
 
-    string name, headerOmit;  
-    int mark;   
+    string name, headerOmit;
+    int mark;
 
-    getline(read, headerOmit); // Omit Header @indeevar 😉😉😉😉😉
+    getline(readFile, headerOmit); // Omit Header
 
-    while(read >> name >> mark){
-       cout << name << ": " << mark + 5 << endl;
-    }                 
+    while (readFile >> name >> mark)
+    {
+        cout << name << ": " << mark << endl;
+    }
 
-    read.close();                  
+    readFile.close();
 
     return 0;
 }
